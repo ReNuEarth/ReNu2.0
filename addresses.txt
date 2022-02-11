@@ -1,0 +1,2 @@
+const Coin_RREC_Address = '0xca3e960C9d063b0988f54BFE2e312138A56aD4E3';
+const Coin_USDT_Address = '0xbc44680b435ee19df43c6ea7eb73f61cd837f20c';
