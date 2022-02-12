@@ -13,7 +13,7 @@ module.exports = {
   },
   networks: {
     hardhat: {
-      chainId: 1337
+      chainId: 137
     },
     matic_testnet: {
       url: "https://polygon-mumbai.g.alchemy.com/v2/ReFmyD8aau2mBy3zN-dt5bPIMrhuwDpK",
