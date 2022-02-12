@@ -218,7 +218,7 @@ const App = (): Node => {
   if (!account){
     actionText = 'Connect Wallet';
     clickAction = clickActionc2_aa118475_j;
-  }else if (!ethers.BigNumber.from(80001).eq(chainId)){
+  }else if (!ethers.BigNumber.from(137).eq(chainId)){
     actionText = 'Please connect to the Polygon Mumbai testnet';
     clickAction = function(e){
       window.alert("Please open your wallet to change the network");
@@ -262,9 +262,8 @@ const App = (): Node => {
             <h1><img src={Renu} className="renu"/></h1>
 
             <p className="bannertext">
-              Powering Web3 with Renewable Energy</p>
-            <p className="bannertextt">
-              <u>Renewable Energy in the first instance</u></p>
+              Powering Web3 with <u>Renewable Energy</u></p>
+            
 
             <div className="row justify-content-center mt-31" style={{zIndex: 99999999999}}>
               <div className="col-lg-5" style={{padding:'10px'}}>
