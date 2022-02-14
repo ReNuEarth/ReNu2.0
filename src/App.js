@@ -218,7 +218,7 @@ const App = (): Node => {
   if (!account){
     actionText = 'Connect Wallet';
     clickAction = clickActionc2_aa118475_j;
-  }else if (!ethers.BigNumber.from(137).eq(chainId)){
+  }else if (!ethers.BigNumber.from(80001).eq(chainId)){
     actionText = 'Please connect to the Polygon Mumbai testnet';
     clickAction = function(e){
       window.alert("Please open your wallet to change the network");
