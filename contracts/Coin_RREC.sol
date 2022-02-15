@@ -481,7 +481,7 @@ contract Coin_RREC is ERC20 {
 	address public USDT_Address;
 	constructor() ERC20("ReNu Renewable Energy Certificate", "RREC") {
 		owner = msg.sender;
-		USDT_Address = 0xc2132d05d31c914a87c6611c10748aeb04b58e8f;
+		USDT_Address = 0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174;
 	}
 
 	event Mint(address mintBy);
