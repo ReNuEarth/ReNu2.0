@@ -489,6 +489,42 @@ const App = (): Node => {
             </a>
             <div className="copyright">© 2022, ReNu.Earth </div>
           </div>
+          <div class="col-lg-3">
+						<div class="social-block">
+							<div class="social-block__title">
+								About
+							</div>
+
+							<ul class="social-list">
+								<li class="social-list__item">
+
+									<a href="#" class="social-list__link">
+										<i class=" fontello-icon fab fa-medium"></i>
+									</a>
+								</li>
+								<li class="social-list__item">
+									<a href="#" class="social-list__link">
+										<i class=" fontello-icon fab fa-discord"></i>
+									</a>
+								</li>
+								<li class="social-list__item">
+									<a href="#" class="social-list__link">
+										<i class=" fontello-icon fas fa-book"></i>
+									</a>
+								</li>
+								<li class="social-list__item">
+									<a href="#" class="social-list__link">
+										<i class=" fontello-icon fab fa-twitter"></i>
+									</a>
+								</li>
+								<li class="social-list__item">
+									<a href="#" class="social-list__link">
+										<i class=" fontello-icon fab fa-linkedin"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
         </div>
       </div>
     </footer>
