@@ -31,12 +31,14 @@
 .wrec{
   margin-top: 100px;
 }
+/* 
 .downloadeth{
   background-color: #0f1a35;
   ;
   padding-top: 5px;
   padding-bottom: 5px;
 }
+*/ 
 .usdx{
   color: #fff;
   font-size: 25px;
@@ -47,6 +49,7 @@
 }
 .usdbg{
   background-color: #1d183d;
+  opacity: .3;
   margin:  10px;
   border-radius: 10px;
 }
