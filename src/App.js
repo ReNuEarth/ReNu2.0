@@ -18,8 +18,8 @@ import DocsBg from './img/docs-bg.png';
 
 import Coin_RREC from './artifacts/contracts/Coin_RREC.sol/Coin_RREC.json';
 import Coin_USDT from './artifacts/contracts/Coin_USDT.sol/Coin_USDT.json';
-const Coin_RREC_Address = '0xe49b55ea3b94bb63d080f12c02aa22aba4bf5b35';
-const Coin_USDT_Address = '0x2791bca1f2de4661ed88a30c99a7a9449aa84174';
+const Coin_RREC_Address = '0xe49b55Ea3B94Bb63D080f12C02aa22ABa4BF5b35';
+const Coin_USDT_Address = '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174';
 function shortenName(text){
         if (text.length < 9){
                 return text;
