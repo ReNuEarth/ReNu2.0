@@ -115,7 +115,7 @@ const App = (): Node => {
     messages['c2_5d8a8341'] = <div>Connecting to your wallet. Your wallet should pop up soon...</div>; setMessages({...messages}); 
 
     cryptoAdmin(instance, {add:Coin_USDT_Address, json:Coin_USDT}, 'approve', function(value){
-      messages['c2_5d8a8341'] = <div>Approving withdrawal of USDT...</div>; setMessages({...messages}); 
+      messages['c2_5d8a8341'] = <div>Approving withdrawal of USDC...</div>; setMessages({...messages}); 
       const provider = new ethers.providers.Web3Provider(instance);
       new ethers.Contract(Coin_USDT_Address, Coin_USDT.abi, provider.getSigner()).once('Approval', (from, to, amount)=>{ 
         var x = ethers.BigNumber.from('493').mul(ethers.BigNumber.from( makeADecimalTextIntoLongText(valueX, ethers.BigNumber.from('18').toNumber()) )).div(ethers.BigNumber.from('100000000000000')).toString();
