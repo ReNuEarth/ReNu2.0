@@ -18,8 +18,8 @@ import DocsBg from './img/docs-bg.png';
 
 import Coin_RREC from './artifacts/contracts/Coin_RREC.sol/Coin_RREC.json';
 import Coin_USDT from './artifacts/contracts/Coin_USDT.sol/Coin_USDT.json';
-const Coin_RREC_Address = '0xca3e960C9d063b0988f54BFE2e312138A56aD4E3';
-const Coin_USDT_Address = '0xbc44680b435ee19df43c6ea7eb73f61cd837f20c';
+const Coin_RREC_Address = '0xe49b55ea3b94bb63d080f12c02aa22aba4bf5b35';
+const Coin_USDT_Address = '0x2791bca1f2de4661ed88a30c99a7a9449aa84174';
 function shortenName(text){
         if (text.length < 9){
                 return text;
@@ -219,7 +219,7 @@ const App = (): Node => {
     actionText = 'Connect Wallet';
     clickAction = clickActionc2_aa118475_j;
   }else if (!ethers.BigNumber.from(137).eq(chainId)){
-    actionText = 'Please connect to the Polygon Mumbai testnet';
+    actionText = 'Please connect to the Polygon Mainnet';
     clickAction = function(e){
       window.alert("Please open your wallet to change the network");
     }
@@ -271,7 +271,7 @@ const App = (): Node => {
               
                 <div className="row usdbg"  style={{margin:'10px'}}>
                  <div className="col-lg-4 col-4 mt-7" >
-                   <h6>From</h6>USDT
+                   <h6>From</h6>USDC
                  </div>
                  <div className="col-lg-8 col-8 mt-7">
                    <input type="text" className="input" placeholder="0" value={usdtValue} onChange={changeUsdt}/>
@@ -293,7 +293,7 @@ const App = (): Node => {
                 <h6>Rate</h6>
               </div>
               <div className="col-lg-8 col-8 mt-7">
-                <h5 className="">$4.93 USDT per RREC</h5>
+                <h5 className="">$4.93 USDC per RREC</h5>
              </div>
              
             </div>
@@ -328,7 +328,7 @@ const App = (): Node => {
                 non-power (i.e., environmental) attributes — of renewable electricity generation. A REC
                 is created for every megawatt hour (MWh) of electricity generated and delivered to the
                 grid from a renewable energy resource. Electricity cannot be considered renewable
-                without a REC to substantiate its renewable-ness. —<br/><strong> United States Environmental Protection Agency
+                without a REC to substantiate its renewable-ness. <br/><br/>—<strong> United States Environmental Protection Agency
                 </strong></p>
             </div>
           </div>
@@ -352,7 +352,8 @@ const App = (): Node => {
               <h2>How ReNu Works</h2>
             </div>
             <p><span className="numbers">1.</span>
-              Our RECs are backed buy the highest quality solar and wind projects in the US.
+              Our RREC tokens are backed buy the highest quality solar and wind projects in the US (2018 vintage and newer Class 1 RECs). 
+	      Purchase the amount of RECs you need above with USDC.
 
 
             </p>
