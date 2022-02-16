@@ -91,14 +91,14 @@ const App = (): Node => {
     setUsdtValue(e.target.value);
     if (isDecimalText(e.target.value)){
       var p = +e.target.value/4.93;
-      setRRecValue(p.toFixed(2).toString());
+      setRRecValue(p.toFixed(3).toString());
     }
   }
   function changeRrec(e){
     setRRecValue(e.target.value);
     if (isDecimalText(e.target.value)){
       var p = +e.target.value*4.93;
-      setUsdtValue(p.toFixed(2).toString());
+      setUsdtValue(p.toFixed(3).toString());
     }
   }
 
@@ -117,14 +117,21 @@ const App = (): Node => {
     cryptoAdmin(instance, {add:Coin_USDT_Address, json:Coin_USDT}, 'approve', function(value){
       messages['c2_5d8a8341'] = <div>Approving withdrawal of USDC...</div>; setMessages({...messages}); 
       const provider = new ethers.providers.Web3Provider(instance);
-      new ethers.Contract(Coin_USDT_Address, Coin_USDT.abi, provider.getSigner()).once('Approval', (from, to, amount)=>{ 
+
+      var approvePiece = new ethers.Contract(Coin_USDT_Address, Coin_USDT.abi, provider.getSigner());
+      var approveFilter = approvePiece.filters.Approval(account, Coin_RREC_Address);
+
+      approvePiece.once(approveFilter, (from, to, amount)=>{ 
         var x = ethers.BigNumber.from('493').mul(ethers.BigNumber.from( makeADecimalTextIntoLongText(valueX, ethers.BigNumber.from('18').toNumber()) )).div(ethers.BigNumber.from('100000000000000')).toString();
         if (from === account && to === Coin_RREC_Address && amount.toString() === x){
         messages['c2_5d8a8341'] =  <div>Seeking your approval to Mint</div>; setMessages({...messages}); 
         cryptoAdmin(instance, {add:Coin_RREC_Address, json:Coin_RREC}, 'mint', function(value){
           messages['c2_5d8a8341'] = <div>Minting...</div>; setMessages({...messages}); 
           const provider = new ethers.providers.Web3Provider(instance);
-          new ethers.Contract(Coin_RREC_Address, Coin_RREC.abi, provider.getSigner()).once('Transfer', (from, to, amount)=>{ if (from === '0x0000000000000000000000000000000000000000' && to === account && amount.toString() === ethers.BigNumber.from( makeADecimalTextIntoLongText(valueX, ethers.BigNumber.from('18').toNumber()) ).toString()){
+          var transferPiece = new ethers.Contract(Coin_RREC_Address, Coin_RREC.abi, provider.getSigner());
+          var transferFilter = transferPiece.filters.Transfer('0x0000000000000000000000000000000000000000', account);
+
+          transferPiece.once(transferFilter, (from, to, amount)=>{ if (from === '0x0000000000000000000000000000000000000000' && to === account && amount.toString() === ethers.BigNumber.from( makeADecimalTextIntoLongText(valueX, ethers.BigNumber.from('18').toNumber()) ).toString()){
             messages['c2_5d8a8341'] = null; setMessages({...messages}); 
             window.alert('Minted');
           }});
@@ -138,6 +145,8 @@ const App = (): Node => {
       messages['c2_5d8a8341'] = null; setMessages({...messages}); 
     }, Coin_RREC_Address,ethers.BigNumber.from('493').mul(ethers.BigNumber.from( makeADecimalTextIntoLongText(valueX, ethers.BigNumber.from('18').toNumber()) )).div(ethers.BigNumber.from('100000000000000'))); 
   }
+
+
   async function connectWallet(){
     if (account){
       return;
@@ -352,8 +361,8 @@ const App = (): Node => {
               <h2>How ReNu Works</h2>
             </div>
             <p><span className="numbers">1.</span>
-              Our RREC tokens are backed buy the highest quality solar and wind projects in the US (2018 vintage and newer Class 1 RECs). 
-	      Purchase the amount of RECs you need above with USDC.
+              Our RREC tokens are backed by the highest quality solar and wind projects in the US (2018 vintage and newer Class 1 RECs). 
+        Purchase the amount of RECs you need above with USDC.
 
 
             </p>
@@ -491,41 +500,41 @@ const App = (): Node => {
             <div className="copyright">© 2022, ReNu.Earth </div>
           </div>
           <div class="col-lg-3">
-						<div class="social-block">
-							<div class="social-block__title">
-								About
-							</div>
+            <div class="social-block">
+              <div class="social-block__title">
+                About
+              </div>
 
-							<ul class="social-list">
-								<li class="social-list__item">
+              <ul class="social-list">
+                <li class="social-list__item">
 
-									<a href="#" class="social-list__link">
-										<i class=" fontello-icon fab fa-medium"></i>
-									</a>
-								</li>
-								<li class="social-list__item">
-									<a href="#" class="social-list__link">
-										<i class=" fontello-icon fab fa-discord"></i>
-									</a>
-								</li>
-								<li class="social-list__item">
-									<a href="#" class="social-list__link">
-										<i class=" fontello-icon fas fa-book"></i>
-									</a>
-								</li>
-								<li class="social-list__item">
-									<a href="#" class="social-list__link">
-										<i class=" fontello-icon fab fa-twitter"></i>
-									</a>
-								</li>
-								<li class="social-list__item">
-									<a href="#" class="social-list__link">
-										<i class=" fontello-icon fab fa-linkedin"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
+                  <a href="#" class="social-list__link">
+                    <i class=" fontello-icon fab fa-medium"></i>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link">
+                    <i class=" fontello-icon fab fa-discord"></i>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link">
+                    <i class=" fontello-icon fas fa-book"></i>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link">
+                    <i class=" fontello-icon fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link">
+                    <i class=" fontello-icon fab fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
