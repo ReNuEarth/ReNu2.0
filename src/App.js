@@ -499,37 +499,37 @@ const App = (): Node => {
             </a>
             <div className="copyright">© 2022, ReNu.Earth </div>
           </div>
-          <div class="col-lg-3">
-            <div class="social-block">
-              <div class="social-block__title">
+          <div className="col-lg-3">
+            <div className="social-block">
+              <div className="social-block__title">
                 About
               </div>
 
-              <ul class="social-list">
-                <li class="social-list__item">
+              <ul className="social-list">
+                <li className="social-list__item">
 
-                  <a href="#" class="social-list__link">
-                    <i class=" fontello-icon fab fa-medium"></i>
+                  <a href="https://renuearth.medium.com/" className="social-list__link">
+                    <i className=" fontello-icon fab fa-medium"></i>
                   </a>
                 </li>
-                <li class="social-list__item">
-                  <a href="#" class="social-list__link">
-                    <i class=" fontello-icon fab fa-discord"></i>
+                <li className="social-list__item">
+                  <a href="#" className="social-list__link">
+                    <i className=" fontello-icon fab fa-discord"></i>
                   </a>
                 </li>
-                <li class="social-list__item">
-                  <a href="#" class="social-list__link">
-                    <i class=" fontello-icon fas fa-book"></i>
+                <li className="social-list__item">
+                  <a href="#" className="social-list__link">
+                    <i className=" fontello-icon fas fa-book"></i>
                   </a>
                 </li>
-                <li class="social-list__item">
-                  <a href="#" class="social-list__link">
-                    <i class=" fontello-icon fab fa-twitter"></i>
+                <li className="social-list__item">
+                  <a href="https://twitter.com/renu_earth" className="social-list__link">
+                    <i className=" fontello-icon fab fa-twitter"></i>
                   </a>
                 </li>
-                <li class="social-list__item">
-                  <a href="#" class="social-list__link">
-                    <i class=" fontello-icon fab fa-linkedin"></i>
+                <li className="social-list__item">
+                  <a href="#" className="social-list__link">
+                    <i className=" fontello-icon fab fa-linkedin"></i>
                   </a>
                 </li>
               </ul>
