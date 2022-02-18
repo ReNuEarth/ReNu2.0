@@ -361,17 +361,17 @@ const App = (): Node => {
               <h2>How ReNu Works</h2>
             </div>
             <p><span className="numbers">1.</span>
-              Our RREC tokens are backed by the highest quality solar and wind projects in the US (2018 vintage and newer Class 1 RECs). 
+              Our RREC tokens are backed by the highest quality solar and wind projects in North America (2018 vintage and newer Class 1 RECs). 
         Purchase the amount of RECs you need above with USDC.
 
 
             </p>
             <p><span className="numbers">2.</span> We immediately buy and retire high quality RECs in traditional, off-chain markets,
               ensuring that each token is 1 to 1 backed by a corresponding, high quality REC
-              from a US solar or wind project.
+              from a North American solar or wind project.
             </p>
             <p><span className="numbers">3.</span>
-              A 3rd party auditor does daily verification, ensuring that the amount of RREC tokens is exactly the same amount of wind RECs and solar RECs retired
+              A 3rd party auditor does weekly verification, ensuring that the amount of RREC tokens is exactly the same amount of wind RECs and solar RECs retired
               in our registry accounts.
             </p>
             <p><span className="numbers">4.</span>
@@ -416,7 +416,7 @@ const App = (): Node => {
               <div className="token__desc-title">SOLAR
               </div>
               <div className="token__desc-text">
-                <p>Curated solar renewable energy certificates from the best projects in the US (2018+)</p>
+                <p>Curated solar renewable energy certificates from the best projects in North America (2018+ Class 1 RECs)</p>
               
               </div>
             </div>
@@ -430,7 +430,7 @@ const App = (): Node => {
               <div className="token__desc-title">WIND
               </div>
               <div className="token__desc-text">
-                <p>Curated solar renewable energy certificates from the best projects in the US (2018+) </p>
+                <p>Curated wind renewable energy certificates from the best projects in North America (2018+ Class 1 RECs) </p>
               
             
             </div>
@@ -509,11 +509,11 @@ const App = (): Node => {
                 <li className="social-list__item">
 
                   <a href="https://renuearth.medium.com/" className="social-list__link">
-                    <i className=" fontello-icon fab fa-medium"></i>
+                    <i className="fab fa-medium"></i>
                   </a>
                 </li>
                 <li className="social-list__item">
-                  <a href="#" className="social-list__link">
+                  <a href="https://discord.gg/CBvq3vYm" className="social-list__link">
                     <i className=" fontello-icon fab fa-discord"></i>
                   </a>
                 </li>
