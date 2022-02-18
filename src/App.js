@@ -361,7 +361,7 @@ const App = (): Node => {
               <h2>How ReNu Works</h2>
             </div>
             <p><span className="numbers">1.</span>
-              Our RREC tokens are backed by the highest quality solar and wind projects in North America (2018 vintage and newer Class 1 RECs). 
+              Our RREC tokens are backed by the highest quality solar and wind projects in North America (2018 vintage and newer RECs). 
         Purchase the amount of RECs you need above with USDC.
 
 
@@ -416,7 +416,7 @@ const App = (): Node => {
               <div className="token__desc-title">SOLAR
               </div>
               <div className="token__desc-text">
-                <p>Curated solar renewable energy certificates from the best projects in North America (2018+ Class 1 RECs)</p>
+                <p>Curated solar renewable energy certificates from the best projects in North America (2018+ RECs)</p>
               
               </div>
             </div>
@@ -430,7 +430,7 @@ const App = (): Node => {
               <div className="token__desc-title">WIND
               </div>
               <div className="token__desc-text">
-                <p>Curated wind renewable energy certificates from the best projects in North America (2018+ Class 1 RECs) </p>
+                <p>Curated wind renewable energy certificates from the best projects in North America (2018+ RECs) </p>
               
             
             </div>
