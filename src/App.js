@@ -510,7 +510,7 @@ const App = (): Node => {
 
                   <a href="https://renuearth.medium.com/" className="social-list__link">
                     <i className=" fontello-icon fab fa-medium">
-                     <::before></::before>
+                     ::before
                     </i>
                   </a>
                 </li>
