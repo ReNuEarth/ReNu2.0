@@ -509,7 +509,9 @@ const App = (): Node => {
                 <li className="social-list__item">
 
                   <a href="https://renuearth.medium.com/" className="social-list__link">
-                    <i className="fab fa-medium"></i>
+                    <i className=" fontello-icon fab fa-medium">
+                     <::before></::before>
+                    </i>
                   </a>
                 </li>
                 <li className="social-list__item">
