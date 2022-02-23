@@ -510,28 +510,36 @@ const App = (): Node => {
 
                   <a href="https://renuearth.medium.com/" className="social-list__link">
                     <i className=" fontello-icon fab fa-medium">
-                     ::before
+                     Medium
                     </i>
                   </a>
                 </li>
                 <li className="social-list__item">
                   <a href="https://discord.gg/CBvq3vYm" className="social-list__link">
-                    <i className=" fontello-icon fab fa-discord"></i>
+                    <i className=" fontello-icon fab fa-discord">
+                     Discord       
+                    </i>
                   </a>
                 </li>
                 <li className="social-list__item">
                   <a href="#" className="social-list__link">
-                    <i className=" fontello-icon fas fa-book"></i>
+                    <i className=" fontello-icon fas fa-book">
+                     GitBook       
+                    </i>
                   </a>
                 </li>
                 <li className="social-list__item">
                   <a href="https://twitter.com/renu_earth" className="social-list__link">
-                    <i className=" fontello-icon fab fa-twitter"></i>
+                    <i className=" fontello-icon fab fa-twitter">
+                     Twitter        
+                    </i>
                   </a>
                 </li>
                 <li className="social-list__item">
                   <a href="#" className="social-list__link">
-                    <i className=" fontello-icon fab fa-linkedin"></i>
+                    <i className=" fontello-icon fab fa-linkedin">
+                     LinkedIn        
+                    </i>
                   </a>
                 </li>
               </ul>
