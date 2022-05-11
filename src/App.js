@@ -515,7 +515,7 @@ const App = (): Node => {
                   </a>
                 </li>
                 <li className="social-list__item">
-                  <a href="https://discord.gg/CBvq3vYm" className="social-list__link">
+                  <a href="" className="social-list__link">
                     <i className=" fontello-icon fab fa-discord">
                      Discord       
                     </i>
